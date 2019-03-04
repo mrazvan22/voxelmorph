@@ -86,6 +86,9 @@ def train(data_dir,
         os.mkdir(model_dir)
 
     # GPU handling
+    from tensorflow.python.client import device_lib
+    print(device_lib.list_local_devices())
+
     gpu = '/gpu:%d' % 0 # gpu_id
     os.environ["CUDA_VISIBLE_DEVICES"] = gpu_id
     config = tf.ConfigProto()

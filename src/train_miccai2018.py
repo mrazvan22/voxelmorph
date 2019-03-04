@@ -58,7 +58,7 @@ def train(data_dir,
     
     # load atlas from provided files. The atlas we used is 160x192x224.
     atlas_vol = np.load(atlas_file)['vol'][np.newaxis, ..., np.newaxis]
-    vol_size = atlas_vol.shape[1:-1] 
+    vol_size = atlas_vol.shape[1:-1]
     # prepare data files
     # for the CVPR and MICCAI papers, we have data arranged in train/validate/test folders
     # inside each folder is a /vols/ and a /asegs/ folder with the volumes
